@@ -329,9 +329,9 @@
             script += `for INSTANCE in ${instancias.join(' ')}\ndo\n`;
 			script += `do\n`;
 			script += `BD_VALIDA=\${INSTANCE}\n`;
-			script += `   ssh ${usuario}@"\host_${nombreHostFinal}" sh \$RUTAPO/shell/tbs_usageM_80pct.sh     \$BD_VALIDA\n`;
-			script += `   ssh ${usuario}@"\host_${nombreHostFinal}" cat \$RUTAPO/logs/TbsGral.html >> \$FILE\n`;
-			script += `   ssh ${usuario}@"\host_${nombreHostFinal}" sh \$RUTAPO/shell/delete_lgs.sh\n`;
+			script += `   ssh ${usuario}@"\$host_${nombreHostFinal}" sh \$RUTAPO/shell/tbs_usageM_80pct.sh     \$BD_VALIDA\n`;
+			script += `   ssh ${usuario}@"\$host_${nombreHostFinal}" cat \$RUTAPO/logs/TbsGral.html >> \$FILE\n`;
+			script += `   ssh ${usuario}@"\$host_${nombreHostFinal}" sh \$RUTAPO/shell/delete_lgs.sh\n`;
 			script += `done\n`;
 			script += `}\n\n`;
 			script += `#####Ejecucion\n`;
